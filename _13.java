@@ -1,4 +1,19 @@
+class _13 {
+
+    public static void main(String[] args) {
+
+        String s = "MCMXCIV";
+
+        Solution obj = new Solution();
+
+        int result = obj.romanToInt(s);
+
+        System.out.println("Integer Value: " + result);
+    }
+}
+
 class Solution {
+
     public int romanToInt(String s) {
         int total = 0;
         int prev = 0;
