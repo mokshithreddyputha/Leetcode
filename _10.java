@@ -1,4 +1,20 @@
+public class _10 {
+
+    public static void main(String[] args) {
+
+        String s = "aab";
+        String p = "c*a*b";
+
+        Solution obj = new Solution();
+
+        boolean result = obj.isMatch(s, p);
+
+        System.out.println(result);
+    }
+}
+
 class Solution {
+
     public boolean isMatch(String s, String p) {
         int m = s.length();
         int n = p.length();
