@@ -1,4 +1,19 @@
+class _14 {
+
+    public static void main(String[] args) {
+
+        String[] strs = {"flower", "flow", "flight"};
+
+        Solution obj = new Solution();
+
+        String result = obj.longestCommonPrefix(strs);
+
+        System.out.println("Longest Common Prefix: " + result);
+    }
+}
+
 class Solution {
+
     public String longestCommonPrefix(String[] strs) {
 
         if (strs == null || strs.length == 0)
