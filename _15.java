@@ -1,6 +1,21 @@
 import java.util.*;
 
+class _15 {
+
+    public static void main(String[] args) {
+
+        int[] nums = {-1, 0, 1, 2, -1, -4};
+
+        Solution obj = new Solution();
+
+        List<List<Integer>> result = obj.threeSum(nums);
+
+        System.out.println(result);
+    }
+}
+
 class Solution {
+
     public List<List<Integer>> threeSum(int[] nums) {
 
         List<List<Integer>> ans = new ArrayList<>();
