@@ -1,4 +1,18 @@
+class _12 {
+    public static void main(String[] args) {
+
+        int num = 1994;
+
+        Solution obj = new Solution();
+
+        String result = obj.intToRoman(num);
+
+        System.out.println("Roman Numeral: " + result);
+    }
+}
+
 class Solution {
+
     public String intToRoman(int num) {
 
         int[] values = {
