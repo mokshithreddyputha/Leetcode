@@ -1,6 +1,6 @@
 import java.util.*;
 
-class _1291 {
+class dailyQuestion1291 {
 
     public static void main(String[] args) {
 
