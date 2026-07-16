@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-class Main {
+class dailyQuestion3867 {
 
     public static void main(String[] args) {
 
