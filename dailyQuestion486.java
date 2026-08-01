@@ -1,19 +1,24 @@
-bool PredictTheWinner(int* nums, int numsSize) {
-    int dp[21][21];
+class Solution {
+    public boolean predictTheWinner(int[] nums) {
+        int n = nums.length;
+        int[][] dp = new int[n][n];
 
-    for (int i = 0; i < numsSize; i++)
-        dp[i][i] = nums[i];
+        // Base case
+        for (int i = 0; i < n; i++)
+            dp[i][i] = nums[i];
 
-    for (int len = 2; len <= numsSize; len++) {
-        for (int i = 0; i + len - 1 < numsSize; i++) {
-            int j = i + len - 1;
+        // Fill table
+        for (int len = 2; len <= n; len++) {
+            for (int i = 0; i + len - 1 < n; i++) {
+                int j = i + len - 1;
 
-            int pickLeft = nums[i] - dp[i + 1][j];
-            int pickRight = nums[j] - dp[i][j - 1];
+                int pickLeft = nums[i] - dp[i + 1][j];
+                int pickRight = nums[j] - dp[i][j - 1];
 
-            dp[i][j] = (pickLeft > pickRight) ? pickLeft : pickRight;
+                dp[i][j] = Math.max(pickLeft, pickRight);
+            }
         }
-    }
 
-    return dp[0][numsSize - 1] >= 0;
+        return dp[0][n - 1] >= 0;
+    }
 }
